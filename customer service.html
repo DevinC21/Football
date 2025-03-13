@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Service - SoccerXclusive</title>
+    <link rel="stylesheet" href="customer service.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>Soccer<span>Xclusive</span></h1>
+        </div>
+        <nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="kits.html">Kits</a></li>
+                <li class="active"><a href="customer-service.html">Customer Service</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" style="height: 50vh;">
+        <div class="hero-content">
+            <h2>Customer Service</h2>
+            <p>We're here to help with all your football kit needs</p>
+        </div>
+    </section>
+
+    <section class="service-section">
+        <div class="container" style="padding: 4rem 5%;">
+            <h2 class="section-title" style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; position: relative; color: var(--black);">How Can We Help?</h2>
+            
+            <div class="service-options">
+                <div class="service-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Shipping Information</h3>
+                    <p>Track your order or learn about our shipping policies</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h3>Returns & Exchanges</h3>
+                    <p>Easy process to return or exchange your items</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>Size Guide</h3>
+                    <p>Find the perfect fit for your football kit</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>Common Questions</h3>
+                    <p>Quick answers to our most frequently asked questions</p>
+                </div>
+            </div>
+            
+            <div class="tabs-container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="shipping">Shipping Info</button>
+                    <button class="tab-btn" data-tab="returns">Returns Policy</button>
+                    <button class="tab-btn" data-tab="size-guide">Size Guide</button>
+                    <button class="tab-btn" data-tab="contact">Contact Us</button>
+                </div>
+                
+                <div class="tab-content active" id="shipping">
+                    <div class="shipping-policy">
+                        <div class="policy-content">
+                            <h3>Shipping Information</h3>
+                            <p>At SoccerXclusive, we strive to deliver your football kits as quickly as possible. Here's what you need to know about our shipping process:</p>
+                            
+                            <table class="policy-table">
+                                <thead>
+                                    <tr>
+                                        <th>Shipping Method</th>
+                                        <th>Delivery Time</th>
+                                        <th>Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Standard Shipping (US)</td>
+                                        <td>5-7 business days</td>
+                                        <td>$5.99 (Free on orders over $75)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Express Shipping (US)</td>
+                                        <td>2-3 business days</td>
+                                        <td>$12.99</td>
+                                    </tr>
+                                    <tr>
+                                        <td>International Standard</td>
+                                        <td>10-15 business days</td>
+                                        <td>$15.99</td>
+                                    </tr>
+                                    <tr>
+                                        <td>International Express</td>
+                                        <td>5-7 business days</td>
+                                        <td>$24.99</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <h4>Order Processing</h4>
+                            <p>All orders are processed within 1-2 business days. Once your order ships, you will receive a confirmation email with tracking information.</p>
+                            
+                            <h4>International Orders</h4>
+                            <p>International customers may be subject to import duties and taxes, which are the responsibility of the recipient. Please check your country's customs policies before ordering.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="returns">
+                    <div class="returns-policy">
+                        <div class="policy-content">
+                            <h3>Returns & Exchanges Policy</h3>
+                            <p>We want you to be completely satisfied with your purchase. If you're not happy with your order, here's our policy for returns and exchanges:</p>
+                            
+                            <h4>Return Eligibility</h4>
+                            <ul class="policy-list">
+                                <li>Items must be returned within 30 days of delivery</li>
+                                <li>Products must be unworn, unwashed, and in original packaging</li>
+                                <li>Customized kits (with player names/numbers) cannot be returned unless defective</li>
+                                <li>Return shipping costs are the responsibility of the customer unless the item is defective</li>
+                            </ul>
+                            
+                            <h4>How to Return an Item</h4>
+                            <ol class="policy-list">
+                                <li>Contact our customer service team at returns@soccerxclusive.com with your order number</li>
+                                <li>We'll send you a return authorization and instructions</li>
+                                <li>Package your items securely with the original packing slip</li>
+                                <li>Ship your return using a tracked shipping service</li>
+                                <li>Refunds will be processed within 5-7 business days after we receive your return</li>
+                            </ol>
+                            
+                            <h4>Exchanges</h4>
+                            <p>For exchanges, simply follow the return process and place a new order for the item you want. This ensures you get your new item as quickly as possible.</p>
+                            
+                            <h4>Defective Items</h4>
+                            <p>If you receive a defective item, please contact us immediately with photos of the defect. We'll arrange a replacement or refund and cover return shipping costs.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="size-guide">
+                    <div class="size-guide-content">
+                        <div class="policy-content">
+                            <h3>Football Kit Size Guide</h3>
+                            <p>Finding the right size is crucial for enjoying your football kit. Use the charts below to find your perfect fit:</p>
+                            
+                            <h4>Adult Sizes (Measurements in inches)</h4>
+                            <table class="policy-table">
+                                <thead>
+                                    <tr>
+                                        <th>Size</th>
+                                        <th>Chest</th>
+                                        <th>Waist</th>
+                                        <th>Height</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Small</td>
+                                        <td>36-38</td>
+                                        <td>30-32</td>
+                                        <td>5'7" - 5'10"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Medium</td>
+                                        <td>38-40</td>
+                                        <td>32-34</td>
+                                        <td>5'10" - 6'0"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Large</td>
+                                        <td>40-42</td>
+                                        <td>34-36</td>
+                                        <td>6'0" - 6'2"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>X-Large</td>
+                                        <td>42-44</td>
+                                        <td>36-38</td>
+                                        <td>6'2" - 6'4"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>XX-Large</td>
+                                        <td>44-46</td>
+                                        <td>38-40</td>
+                                        <td>6'2" - 6'5"</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <h4>Youth Sizes (Measurements in inches)</h4>
+                            <table class="policy-table">
+                                <thead>
+                                    <tr>
+                                        <th>Size</th>
+                                        <th>Chest</th>
+                                        <th>Waist</th>
+                                        <th>Age (Approx)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>YXS</td>
+                                        <td>24-26</td>
+                                        <td>22-24</td>
+                                        <td>4-6 years</td>
+                                    </tr>
+                                    <tr>
+                                        <td>YS</td>
+                                        <td>26-28</td>
+                                        <td>24-26</td>
+                                        <td>6-8 years</td>
+                                    </tr>
+                                    <tr>
+                                        <td>YM</td>
+                                        <td>28-30</td>
+                                        <td>26-28</td>
+                                        <td>8-10 years</td>
+                                    </tr>
+                                    <tr>
+                                        <td>YL</td>
+                                        <td>30-32</td>
+                                        <td>28-30</td>
+                                        <td>10-12 years</td>
+                                    </tr>
+                                    <tr>
+                                        <td>YXL</td>
+                                        <td>32-34</td>
+                                        <td>30-32</td>
+                                        <td>12-14 years</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                            <h4>Measuring Tips</h4>
+                            <ul class="policy-list">
+                                <li>Chest: Measure around the fullest part of your chest, keeping the tape measure horizontal</li>
+                                <li>Waist: Measure around your natural waistline</li>
+                                <li>For jerseys, we recommend sizing up if you're between sizes for a more comfortable fit</li>
+                                <li>Most football jerseys are designed with an athletic fit</li>
+                            </ul>
+                            
+                            <p>Still unsure? Contact our customer service team for personalized sizing advice.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="contact">
+                    <div class="contact-container">
+                        <div class="contact-info">
+                            <h3>Get In Touch</h3>
+                            <p>We're here to answer any questions you may have about our products or services.</p>
+                            
+                            <div class="contact-info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div class="contact-info-text">
+                                    <h3>Email Us</h3>
+                                    <p>support@soccerxclusive.com</p>
+                                    <p>For general inquiries and support</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <div class="contact-info-text">
+                                    <h3>Call Us</h3>
+                                    <p>+1 (555) 123-4567</p>
+                                    <p>Mon-Fri: 9am - 5pm EST</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="contact-info-text">
+                                    <h3>Visit Us</h3>
+                                    <p>123 Soccer Street</p>
+                                    <p>New York, NY 10001</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <i class="fas fa-comments"></i>
+                                <div class="contact-info-text">
+                                    <h3>Live Chat</h3>
+                                    <p>Available on our website</p>
+                                    <p>Mon-Fri: 8am - 8pm EST</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-form">
+                            <h3>Send Us a Message</h3>
+                            <form id="customer-service-form">
+                                <div class="form-group">
+                                    <label for="full-name">Full Name</label>
+                                    <input type="text" id="full-name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="order-number">Order Number (if applicable)</label>
+                                    <input type="text" id="order-number">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <select id="subject" required>
+                                        <option value="">Select Subject</option>
+                                        <option value="order-status">Order Status</option>
+                                        <option value="return">Return/Exchange</option>
+                                        <option value="product-info">Product Information</option>
+                                        <option value="billing">Billing Question</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" rows="5" required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How do I track my order?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Once your order ships, you'll receive a confirmation email with tracking information. You can also log into your account on our website and view your order history to track your package.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What if my kit doesn't fit?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>If your kit doesn't fit, you can return it within 30 days of purchase for an exchange or refund, as long as it's unworn and in original packaging. Please refer to our Returns Policy for detailed instructions on how to process your return.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How do I care for my football kit?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>To maintain the quality of your kit, we recommend washing in cold water on a gentle cycle, turning the kit inside out before washing, avoiding bleach and fabric softeners, and air drying instead of using a dryer. Do not iron directly on prints or badges.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can I modify my order after it's placed?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We process orders quickly to ensure fast shipping. If you need to modify your order, please contact our customer service team immediately. We'll do our best to accommodate changes, but we cannot guarantee modifications once the order processing has begun.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do you offer price matching?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we offer price matching for identical products found at lower prices from authorized retailers. To request a price match, please contact our customer service team with proof of the lower price before placing your order or within 7 days of purchase.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What if my package is lost or damaged?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>If your package appears to be lost or arrives damaged, please contact our customer service team immediately. For lost packages, we'll work with the shipping carrier to locate it or process a replacement. For damaged items, please send photos of the damage, and we'll arrange a replacement or refund.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Soccer<span>Xclusive</span></h2>
+                <p>Premium football kits from around the world</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="kits.html">Kits</a></li>
+                    <li><a href="customer service.html">Customer Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> info@soccerxclusive.com</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Get updates on new kit releases and exclusive offers</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SoccerXclusive. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons and contents
+                    tabBtns.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    // Show corresponding content
+                    const tabId = button.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // FAQ accordion functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const faqItem = question.parentElement;
+                    faqItem.classList.toggle('active');
+                });
+            });
+            
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+            
+            // Form submission
+            const contactForm = document.getElementById('customer-service-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your message. Our customer service team will respond within 24 hours.');
+                    contactForm.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

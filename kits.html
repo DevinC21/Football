@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoccerXclusive - Football Kits Collection</title>
+    <link rel="stylesheet" href="kits.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <h1>Soccer<span>Xclusive</span></h1>
+        </div>
+        <nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="kits.html">Kits</a></li>
+                <li><a href="customer service.html">Customer Service</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-banner">
+        <h1>Football Kits Collection</h1>
+        <p>Discover our extensive range of premium quality football kits from clubs around the world</p>
+    </section>
+
+    <section class="filter-section">
+        <div class="filter-container">
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all">All Leagues</button>
+                <button class="filter-btn" data-filter="premier-league">Premier League</button>
+                <button class="filter-btn" data-filter="la-liga">La Liga</button>
+                <button class="filter-btn" data-filter="serie-a">Serie A</button>
+                <button class="filter-btn" data-filter="bundesliga">Bundesliga</button>
+                <button class="filter-btn" data-filter="international">International</button>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" placeholder="Search kits..." id="search-input">
+                <button type="button"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="view-options">
+                <div class="sort-container">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select">
+                        <option value="popular">Popularity</option>
+                        <option value="newest">Newest</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Customer Rating</option>
+                    </select>
+                </div>
+                
+                <div class="display-options">
+                    <button class="display-btn active" id="grid-view"><i class="fas fa-th"></i></button>
+                    <button class="display-btn" id="list-view"><i class="fas fa-list"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="kits-display">
+        <div class="kits-wrapper">
+            <!-- Grid View -->
+            <div class="kits-grid">
+                <!-- Premier League Kits -->
+                <div class="kit-card premier-league">
+                    <div class="kit-image">
+                        <img src="https://images.footballfanatics.com/manchester-united/manchester-united-adidas-home-shirt-2024-25_ss5_p-200954451+pv-1+u-6ibxn1aqqasykftc5p27+v-kxr4xseebuuir4fyulus.jpg?_hv=2&w=900" alt="Manchester United Home Kit">
+                        <div class="kit-badges">
+                            <span class="kit-badge new">New</span>
+                        </div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="kit-info">
+                        <h3>Manchester United</h3>
+                        <p>2024/25 Home Kit</p>
+                        <div class="kit-ratings">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="review-count">(28 reviews)</span>
+                        </div>
+                        <div class="price-container">
+                            <span class="current-price">£59.99</span>
+                        </div>
+                        <div class="kit-actions">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kit-card premier-league">
+                    <div class="kit-image">
+                        <img src="https://images.footballfanatics.com/arsenal/arsenal-adidas-home-authentic-shirt-2024-25_ss5_p-201164652+pv-1+u-nszusqhsave971jkfkki+v-ce4h2ppqmvbzqewaotco.jpg?_hv=2&w=900" alt="Arsenal Away Kit">
+                        <div class="kit-badges">
+                            <span class="kit-badge sale">Sale</span>
+                        </div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="kit-info">
+                        <h3>Arsenal</h3>
+                        <p>2024/25 Away Kit</p>
+                        <div class="kit-ratings">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="review-count">(16 reviews)</span>
+                        </div>
+                        <div class="price-container">
+                            <span class="current-price">£59.99</span>
+                            <span class="old-price">£74.99</span>
+                        </div>
+                        <div class="kit-actions">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kit-card premier-league">
+                    <div class="kit-image">
+                        <img src="https://images.footballfanatics.com/liverpool/liverpool-nike-home-stadium-shirt-2024-25_ss5_p-200889403+pv-1+u-splqsltvjeefuampxgd2+v-ih7d29mfpr1fann24tok.jpg?_hv=2&w=900" alt="Liverpool Home Kit">
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="kit-info">
+                        <h3>Liverpool</h3>
+                        <p>2024/25 Home Kit</p>
+                        <div class="kit-ratings">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="review-count">(32 reviews)</span>
+                        </div>
+                        <div class="price-container">
+                            <span class="current-price">£59.99</span>
+                        </div>
+                        <div class="kit-actions">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kit-card premier-league">
+                    <div class="kit-image">
+                        <img src="https://images.footballfanatics.com/chelsea/chelsea-nike-home-stadium-shirt-2024-25_ss5_p-200851164+pv-1+u-canixtzkdetrqr6ldmyh+v-eq0p93tizr7qwtonxyrc.jpg?_hv=2&w=900" alt="Chelsea Third Kit">
+                        <div class="kit-badges">
+                            <span class="kit-badge new">New</span>
+                        </div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="kit-info">
+                        <h3>Chelsea</h3>
+                        <p>2024/25 Third Kit</p>
+                        <div class="kit-ratings">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="review-count">(12 reviews)</span>
+                        </div>
+                        <div class="price-container">
+                            <span class="current-price">£59.99</span>
+                        </div>
+                        <div class="kit-actions">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- La Liga Kits -->
+                <div class="kit-card la-liga">
+                    <div class="kit-image">
+                        <img src="https://images.footballfanatics.com/barcelona/barcelona-nike-home-stadium-shirt-2024-25-kids_ss5_p-200889588+pv-1+u-vm4xs5rlfme0ry1pawpp+v-skdcpltacngbsjpl58cy.jpg?_hv=2&w=900" alt="Barcelona Home Kit">
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="kit-info">
+                        <h3>FC Barcelona</h3>
+                        <p>2024/25 Home Kit</p>
+                        <div class="kit-ratings">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="review-count">(26 reviews)</span>
+                        </div>
+                        <div class="price-container">
+                            <span class="current-price">£59.99</span>
+                        </div>
+                        <div class="kit-actions">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kit-card la-liga">
+                    <div class="kit-image">
+                        <img src="https://images.footballfanatics.com/real-madrid/real-madrid-adidas-home-shirt-2024-25-kids_ss5_p-201163122+pv-1+u-qmkfh5xu8zoza52p2eig+v-jttvjcbgknh9w1rdkzqb.jpg?_hv=2&w=900" alt="Real Madrid Away Kit">
+                        <div class="kit-badges">
+                            <span class="kit-badge new">New</span>
+                        </div>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="kit-info">
+                        <h3>Real Madrid</h3>
+                        <p>2024/25 Away Kit 
+                            <div class="kit-ratings">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="review-count">(46 reviews)</span>
+                        </div>
+                        <div class="price-container">
+                            <span class="current-price">£59.99</span>
+                        </div>
+                        <div class="kit-actions">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="view-details">Details</button>
+                        </div>
+                    </div>

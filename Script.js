@@ -1,115 +1,133 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Smooth Scrolling for Navigation Links
-    document.querySelectorAll("nav ul li a").forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            document.getElementById(targetId).scrollIntoView({
-                behavior: "smooth"
+// Wait for DOM content to load
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Mobile Navigation Toggle
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            const spans = this.querySelectorAll('span');
+            
+            if (navLinks.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+    }
+    
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+            // Check if current item is active
+            const isActive = item.classList.contains('active');
+            
+            // Close all FAQs
+            faqItems.forEach(faq => {
+                faq.classList.remove('active');
+                faq.querySelector('.faq-question').classList.remove('active');
             });
+            
+            // If current item wasn't active, open it
+            if (!isActive) {
+                item.classList.add('active');
+                question.classList.add('active');
+            }
         });
     });
-
-    // Shopping Cart Functionality
-    const cart = [];
-    document.querySelectorAll(".buy-btn").forEach(button => {
-        button.addEventListener("click", function () {
-            const kitName = this.parentElement.querySelector("h3").textContent;
-            addToCart(kitName);
+    
+    // Reviews Slider
+    const reviewDots = document.querySelectorAll('.review-dot');
+    const reviewSlides = document.querySelectorAll('.review-slide');
+    const reviewContainer = document.querySelector('.reviews-container');
+    let currentReviewIndex = 0;
+    
+    // Function to show a specific review
+    function showReview(index) {
+        // Hide all reviews
+        reviewSlides.forEach(slide => {
+            slide.classList.remove('active');
+        });
+        
+        // Remove active class from all dots
+        reviewDots.forEach(dot => {
+            dot.classList.remove('active');
+        });
+        
+        // Show the selected review and activate its dot
+        reviewSlides[index].classList.add('active');
+        reviewDots[index].classList.add('active');
+        currentReviewIndex = index;
+    }
+    
+    // Add click event to dots
+    reviewDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showReview(index);
         });
     });
-
-    function addToCart(item) {
-        cart.push(item);
-        alert(`${item} added to cart!`);
-        updateCart();
+    
+    // Auto-rotate reviews every 5 seconds
+    let reviewInterval = setInterval(() => {
+        currentReviewIndex = (currentReviewIndex + 1) % reviewSlides.length;
+        showReview(currentReviewIndex);
+    }, 5000);
+    
+    // Pause auto-rotation when hovering over reviews
+    if (reviewContainer) {
+        reviewContainer.addEventListener('mouseenter', () => {
+            clearInterval(reviewInterval);
+        });
+        
+        reviewContainer.addEventListener('mouseleave', () => {
+            reviewInterval = setInterval(() => {
+                currentReviewIndex = (currentReviewIndex + 1) % reviewSlides.length;
+                showReview(currentReviewIndex);
+            }, 5000);
+        });
     }
-
-    function updateCart() {
-        const cartDisplay = document.getElementById("cart-display");
-        cartDisplay.innerHTML = cart.length > 0 ? cart.join(", ") : "Cart is empty";
+    
+    // Initialize the first review
+    showReview(0);
+    
+    // Add swipe functionality for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    if (reviewContainer) {
+        reviewContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        
+        reviewContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
     }
-
-    // Dark Mode Toggle
-    const darkModeToggle = document.createElement("button");
-    darkModeToggle.textContent = "Toggle Dark Mode";
-    darkModeToggle.style.position = "fixed";
-    darkModeToggle.style.top = "10px";
-    darkModeToggle.style.right = "10px";
-    darkModeToggle.style.padding = "10px";
-    darkModeToggle.style.backgroundColor = "gold";
-    darkModeToggle.style.border = "none";
-    darkModeToggle.style.cursor = "pointer";
-    darkModeToggle.style.fontWeight = "bold";
-    darkModeToggle.setAttribute("aria-label", "Toggle Dark Mode");
-    darkModeToggle.setAttribute("role", "button");
-    darkModeToggle.setAttribute("tabindex", "0");
-
-    document.body.appendChild(darkModeToggle);
-
-    darkModeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-        if (document.body.classList.contains("dark-mode")) {
-            document.body.style.backgroundColor = "#222";
-            document.body.style.color = "gold";
-        } else {
-            document.body.style.backgroundColor = "#000";
-            document.body.style.color = "white";
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        
+        if (touchEndX < touchStartX - swipeThreshold) {
+            // Swipe left - next review
+            currentReviewIndex = (currentReviewIndex + 1) % reviewSlides.length;
+            showReview(currentReviewIndex);
         }
-    });
-
-    // Add Image Next to Title
-    const title = document.querySelector("header h1");
-    if (title) {
-        const logo = document.createElement("img");
-        logo.src = "kit-logo.png"; // Change to your logo file path
-        logo.alt = "Football Kit Logo – Image of a football kit logo";
-        logo.style.width = "50px";
-        logo.style.height = "50px";
-        logo.style.marginLeft = "10px";
-        logo.style.verticalAlign = "middle";
-        title.appendChild(logo);
+        
+        if (touchEndX > touchStartX + swipeThreshold) {
+            // Swipe right - previous review
+            currentReviewIndex = (currentReviewIndex - 1 + reviewSlides.length) % reviewSlides.length;
+            showReview(currentReviewIndex);
+        }
     }
-
-    // Add Skip to Content Link for Accessibility
-    const skipLink = document.createElement("a");
-    skipLink.href = "#main-content";
-    skipLink.classList.add("skip-link");
-    skipLink.textContent = "Skip to content";
-    skipLink.style.position = "absolute";
-    skipLink.style.top = "0";
-    skipLink.style.left = "0";
-    skipLink.style.padding = "10px";
-    skipLink.style.backgroundColor = "#000";
-    skipLink.style.color = "#fff";
-    skipLink.style.zIndex = "100";
-    document.body.appendChild(skipLink);
-
-    // Main Content Area (for Skip Link)
-    const mainContent = document.querySelector("main");
-    if (mainContent) {
-        mainContent.setAttribute("id", "main-content");
-    }
-
-    // Accessible Navigation (ARIA roles)
-    const nav = document.querySelector("nav");
-    if (nav) {
-        nav.setAttribute("role", "navigation");
-    }
-
-    // Ensure Links Have Focus Styles
-    document.querySelectorAll("a").forEach(link => {
-        link.addEventListener("focus", function () {
-            this.style.outline = "3px solid gold";
-        });
-        link.addEventListener("blur", function () {
-            this.style.outline = "none";
-        });
-    });
-
-    // Add ARIA Role for Buttons
-    document.querySelectorAll(".buy-btn").forEach(button => {
-        button.setAttribute("role", "button");
-        button.setAttribute("aria-label", "Add item to cart");
-    });
 });

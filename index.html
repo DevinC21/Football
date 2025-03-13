@@ -3,133 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football Kits Store</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Linking Google Fonts for better typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>SoccerXclusive - Premium Football Kits</title>
+    <link rel="stylesheet" href="Styles.css">
 </head>
 <body>
-    <!-- Header Section -->
     <header>
-        <h1>Football Kits Store</h1>
+        <div class="logo-container">
+            <h1>Soccer<span>Xclusive</span></h1>
+        </div>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#kits">Kits</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="kits.html">Kits</a></li>
+                <li><a href="customer service.html">Customer Service</a></li>
             </ul>
         </nav>
     </header>
-    
-    <!-- Hero Section -->
-  <section id="home" class="hero">
-    <h2>Welcome to the Best Football Kit Store</h2>
-    <p>Find the latest and greatest football kits from top clubs and national teams.</p>
-    <a href="#kits" class="btn">Shop Now</a>
-</section>
 
-    
-    <!-- Leagues Section -->
-<section id="leagues">
-    <h2>Explore Major Football Leagues</h2>
-    <div class="league-container">
-        <div class="league">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Premier_League_Logo_2016.svg" alt="Premier League">
-            <p>Premier League</p>
-            <a href="premier_league_page.html" class="btn league-btn">Explore</a>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Exclusive Football Kits</h2>
+            <p>Premium quality jerseys from clubs around the world</p>
+            <a href="kits.html" class="btn">Shop Now</a>
         </div>
-        <div class="league">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Ligue_1_logo.svg" alt="Ligue 1">
-            <p>Ligue 1</p>
-            <a href="ligue_1_page.html" class="btn league-btn">Explore</a>
-        </div>
-        <div class="league">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Serie_A_Logo_2020.svg" alt="Serie A">
-            <p>Serie A</p>
-            <a href="serie_a_page.html" class="btn league-btn">Explore</a>
-        </div>
-        <div class="league">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/La_Liga_logo_2021.svg" alt="La Liga">
-            <p>La Liga</p>
-            <a href="la_liga_page.html" class="btn league-btn">Explore</a>
-        </div>
-    </div>
-</section>
-    
-   <!-- Kits Section -->
-<section id="kits">
-    <h2>Featured Kits</h2>
-    <div class="kit-container">
-        <div class="kit">
-            <img src="https://i.etsystatic.com/30596543/r/il/35996c/3238184296/il_1588xN.3238184296_gkd5.jpg" alt="Football Kit 1">
-            <p>Team A - Home Kit</p>
-            <span>£79.99</span>
-            <!-- Modify the button to link to the purchase page -->
-            <a href="purchase_page_1.html" class="btn buy-btn">Buy Now</a>
-        </div>
-        <div class="kit">
-            <img src="https://cdn.shopify.com/s/files/1/0496/5197/4309/products/image_a840287b-562f-4b89-8992-6ce168897553_530x@2x.jpg?v=1620940958" alt="Football Kit 2">
-            <p>Team B - Away Kit</p>
-            <span>£89.99</span>
-            <!-- Modify the button to link to the purchase page -->
-            <a href="purchase_page_2.html" class="btn buy-btn">Buy Now</a>
-        </div>
-    </div>
-</section>
-
-
-
-    
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We provide high-quality football kits from the best teams around the world. Our goal is to bring fans closer to their favorite teams with authentic, stylish, and comfortable kits.</p>
     </section>
-    
-    <!-- Reviews Section -->
-    <section id="reviews">
+
+    <section id="featured" class="featured-kits">
+        <h2>Featured Kits</h2>
+        <div class="kit-container">
+            <div class="kit-card">
+                <div class="kit-image">
+                    <img src="https://images.footballfanatics.com/manchester-united/manchester-united-adidas-home-shirt-2024-25-long-sleeve_ss5_p-200954452+pv-1+u-f04bvuxcdtjm3nt10zno+v-wu91hi03jhh8bfbxtneo.jpg?_hv=2&w=900" alt="Manchester United Home Kit">
+                </div>
+                <div class="kit-info">
+                    <h3>Manchester United</h3>
+                    <p>2024/25 Home Kit</p>
+                    <span class="price">£59.99</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="kit-card">
+                <div class="kit-image">
+                    <img src="https://images.footballfanatics.com/real-madrid/real-madrid-adidas-home-shirt-2024-25-womens_ss5_p-201163126+pv-1+u-mpgkilrumqoynkfsd9hl+v-tffdhti1y7j2aseykucd.jpg?_hv=2&w=900" alt="Real Madrid Away Kit">
+                </div>
+                <div class="kit-info">
+                    <h3>Real Madrid</h3>
+                    <p>2024/25 Away Kit</p>
+                    <span class="price">£59.99</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="kit-card">
+                <div class="kit-image">
+                    <img src="https://images.footballfanatics.com/barcelona/barcelona-nike-home-stadium-shirt-2024-25-kids_ss5_p-200889588+pv-1+u-vm4xs5rlfme0ry1pawpp+v-skdcpltacngbsjpl58cy.jpg?_hv=2&w=900" alt="Barcelona Home Kit">
+                </div>
+                <div class="kit-info">
+                    <h3>FC Barcelona</h3>
+                    <p>2024/25 Home Kit</p>
+                    <span class="price">£59.99</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2>About SoccerXclusive</h2>
+            <p>SoccerXclusive is your premier destination for authentic football kits from clubs around the world. Established in 2020, we've quickly become the go-to source for football enthusiasts looking for high-quality jerseys at competitive prices.</p>
+            <p>Our team of passionate football fans works directly with suppliers to ensure that every kit in our collection meets the highest standards of authenticity and quality.</p>
+            <div class="about-stats">
+                <div class="stat">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>500+</h3>
+                    <p>Kits Available</p>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-globe"></i>
+                    <h3>50+</h3>
+                    <p>Countries Shipped To</p>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-users"></i>
+                    <h3>40,000+</h3>
+                    <p>Happy Customers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kits" class="kits-section">
+        <div class="league-section">
+            <h2>Leagues</h2>
+        
+            <!-- Premier League -->
+            <div class="league">
+                <h3><a href="kits.html" class="league-link">Premier League</a></h3>
+            </div>
+        
+            <!-- La Liga -->
+            <div class="league">
+                <h3><a href="kits.html" class="league-link">La Liga</a></h3>
+            </div>
+        
+            <!-- Serie A -->
+            <div class="league">
+                <h3><a href="kits.html" class="league-link">Serie A</a></h3>
+            </div>
+        
+            <!-- Bundesliga -->
+            <div class="league">
+                <h3><a href="kits.html" class="league-link">Bundesliga</a></h3>
+            </div>
+        </div>
+        
+
+    <section id="reviews" class="reviews-section">
         <h2>Customer Reviews</h2>
-        <div class="review">
-            <p>"Amazing quality and fast shipping! Highly recommended." - John D.</p>
+        <div class="reviews-container">
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer">
+                        <h3>James Wilson</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="review-date">January 15, 2025</p>
+                </div>
+                <p class="review-text"></p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer">
+                        <h3>Sarah Johnson</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="review-date">February 3, 2025</p>
+                </div>
+                <p class="review-text"></p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer">
+                        <h3>Robert Martinez</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="review-date">February 28, 2025</p>
+                </div>
+                <p class="review-text"></p>
+            </div>
         </div>
-        <div class="review">
-            <p>"The best football kits store I've ever shopped at!" - Sarah M.</p>
+        <div class="add-review">
+            <h3>Share Your Experience</h3>
+            <form id="review-form">
+                <div class="form-group">
+                    <label for="reviewer-name">Name</label>
+                    <input type="text" id="reviewer-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reviewer-rating">Rating</label>
+                    <select id="reviewer-rating" required>
+                        <option value="5">5 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="2">2 Stars</option>
+                        <option value="1">1 Star</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="review-content">Your Review</label>
+                    <textarea id="review-content" required></textarea>
+                </div>
+                <button type="submit" class="btn">Submit Review</button>
+            </form>
         </div>
     </section>
-    
-    <!-- FAQ Section -->
-    <section id="faq">
+
+    <section id="faq" class="faq-section">
         <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <h3>Do you offer international shipping?</h3>
-            <p>Yes, we ship worldwide with fast and reliable delivery options.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Are the kits authentic?</h3>
-            <p>Yes, all our kits are 100% authentic and sourced from official suppliers.</p>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Are the kits authentic?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, all our kits are authentic reproductions that match the quality and design of official team merchandise. While not manufactured by the official team suppliers, our kits are made with premium materials and attention to detail.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What sizes are available?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We offer sizes ranging from Small to XXL for adult kits, and ages 4-14 for youth kits. Detailed size charts are available on each product page to help you find the perfect fit.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How long does shipping take?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Shipping times vary by location. Standard shipping within the US typically takes 5-7 business days, while international shipping can take 10-15 business days. Express shipping options are available at checkout.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can I return or exchange my kit?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we offer a 30-day return policy for unworn items in original packaging. Exchanges are also available if you need a different size. Please contact our customer service team to initiate a return or exchange.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can I add custom names and numbers?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! We offer customization services for most kits. You can add your favorite player's name and number, or your own personalized text. Simply select the customization option during checkout and provide the details.</p>
+                </div>
+            </div>
         </div>
     </section>
-    
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: support@footballkitsstore.com</p>
-        <p>Phone: +123 456 7890</p>
-        <p>Follow us on social media:</p>
-        <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
-        </ul>
-    </section>
-    
-    <!-- Footer Section -->
+
     <footer>
-        <p>&copy; 2025 Football Kits Store. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Soccer<span>Xclusive</span></h2>
+                <p>Premium football kits from around the world</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="kits.html">Kits</a></li>
+                    <li><a href="customer service.html">Customer Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> info@soccerxclusive.com</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Get updates on new kit releases and exclusive offers</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SoccerXclusive. All Rights Reserved.</p>
+        </div>
     </footer>
+
+    <script src="Script.js"></script>
 </body>
 </html>
-
