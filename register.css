@@ -1,0 +1,125 @@
+/* Color Palette */
+:root {
+    --black: #121212;
+    --dark-blue: #0c4da2;
+    --blue: #1a66cc;
+    --gold: #ffd700;
+    --white: #ffffff;
+    --gray: #f0f0f0;
+    --dark-gray: #555555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.register-page {
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+}
+
+.register-container {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.register-title {
+    color: var(--black);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    position: relative;
+}
+
+.register-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: var(--gold);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.input-field {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.terms-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+}
+
+.terms-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.register-btn {
+    width: 100%;
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: var(--dark-blue);
+}
+
+.login-link {
+    margin-top: 1rem;
+    color: var(--dark-gray);
+}
+
+.login-link a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 480px) {
+    .register-page {
+        padding: 1rem;
+    }
+
+    .register-container {
+        padding: 2rem 1rem;
+    }
+
+    .terms-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .terms-container input[type="checkbox"] {
+        margin-bottom: 0.5rem;
+    }
+}

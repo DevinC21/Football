@@ -1,0 +1,105 @@
+
+        /* Reusing the color palette and base styles from the original CSS */
+        :root {
+            --black: #121212;
+            --dark-blue: #0c4da2;
+            --blue: #1a66cc;
+            --gold: #ffd700;
+            --white: #ffffff;
+            --gray: #f0f0f0;
+            --dark-gray: #555555;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--gray);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .login-page {
+            width: 100%;
+            max-width: 400px;
+            padding: 2rem;
+        }
+
+        .login-container {
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .login-title {
+            color: var(--black);
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .login-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: var(--gold);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .login-btn {
+            width: 100%;
+            background-color: var(--blue);
+            color: var(--white);
+            border: none;
+            padding: 1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: var(--dark-blue);
+        }
+
+        .signup-link {
+            margin-top: 1rem;
+            color: var(--dark-gray);
+        }
+
+        .signup-link a {
+            color: var(--blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 480px) {
+            .login-page {
+                padding: 1rem;
+            }
+
+            .login-container {
+                padding: 2rem 1rem;
+            }
+        }
