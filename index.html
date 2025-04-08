@@ -9,18 +9,33 @@
 <body>
     <header>
         <div class="logo-container">
-            <h1>Soccer<span>Xclusive</span></h1>
+          <h1>Soccer<span>Xclusive</span></h1>
         </div>
+        <button class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
         <nav>
+          <ul class="nav-menu">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="kits.html">Kits</a></li>
+            <li><a href="customer service.html">Customer Service</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Cart</a></li>
+            <li class="account-dropdown">
+                <a href="#" class="account-toggle">Account <i class="fas fa-chevron-down"></i></a>
+                <ul class="account-menu">
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+            
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
-            <ul class="nav-menu">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="kits.html">Kits</a></li>
-                <li><a href="customer service.html">Customer Service</a></li>
-            </ul>
-        </nav>
+        </div>
     </header>
 
     <section id="home" class="hero">
@@ -37,34 +52,37 @@
             <div class="kit-card">
                 <div class="kit-image">
                     <img src="https://images.footballfanatics.com/manchester-united/manchester-united-adidas-home-shirt-2024-25-long-sleeve_ss5_p-200954452+pv-1+u-f04bvuxcdtjm3nt10zno+v-wu91hi03jhh8bfbxtneo.jpg?_hv=2&w=900" alt="Manchester United Home Kit">
+                    <button class="wishlist-btn" data-kit-id="kit1"><i class="far fa-heart"></i></button>
                 </div>
                 <div class="kit-info">
                     <h3>Manchester United</h3>
                     <p>2024/25 Home Kit</p>
                     <span class="price">£59.99</span>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-kit-id="kit1">Add to Cart</button>
                 </div>
             </div>
             <div class="kit-card">
                 <div class="kit-image">
-                    <img src="https://images.footballfanatics.com/real-madrid/real-madrid-adidas-home-shirt-2024-25-womens_ss5_p-201163126+pv-1+u-mpgkilrumqoynkfsd9hl+v-tffdhti1y7j2aseykucd.jpg?_hv=2&w=900" alt="Real Madrid Away Kit">
+                    <img src="https://images.footballfanatics.com/real-madrid/real-madrid-adidas-home-shirt-2024-25-long-sleeve-kids_ss5_p-201163127+pv-1+u-acegljpra5y9a0tq5vtg+v-zlxttcxv4xld7icrnchz.jpg?_hv=2&w=900" alt="Real Madrid Home Kit">
+                    <button class="wishlist-btn" data-kit-id="kit2"><i class="far fa-heart"></i></button>
                 </div>
                 <div class="kit-info">
                     <h3>Real Madrid</h3>
                     <p>2024/25 Away Kit</p>
                     <span class="price">£59.99</span>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-kit-id="kit2">Add to Cart</button>
                 </div>
             </div>
             <div class="kit-card">
                 <div class="kit-image">
                     <img src="https://images.footballfanatics.com/barcelona/barcelona-nike-home-stadium-shirt-2024-25-kids_ss5_p-200889588+pv-1+u-vm4xs5rlfme0ry1pawpp+v-skdcpltacngbsjpl58cy.jpg?_hv=2&w=900" alt="Barcelona Home Kit">
+                    <button class="wishlist-btn" data-kit-id="kit3"><i class="far fa-heart"></i></button>
                 </div>
                 <div class="kit-info">
                     <h3>FC Barcelona</h3>
                     <p>2024/25 Home Kit</p>
                     <span class="price">£59.99</span>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart" data-kit-id="kit3">Add to Cart</button>
                 </div>
             </div>
         </div>
@@ -78,48 +96,47 @@
             <div class="about-stats">
                 <div class="stat">
                     <i class="fas fa-tshirt"></i>
-                    <h3>500+</h3>
+                    <h3>30+</h3>
                     <p>Kits Available</p>
                 </div>
                 <div class="stat">
                     <i class="fas fa-globe"></i>
-                    <h3>50+</h3>
+                    <h3>30+</h3>
                     <p>Countries Shipped To</p>
                 </div>
                 <div class="stat">
                     <i class="fas fa-users"></i>
-                    <h3>40,000+</h3>
+                    <h3>21+</h3>
                     <p>Happy Customers</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="kits" class="kits-section">
-        <div class="league-section">
-            <h2>Leagues</h2>
-        
+    <section id="leagues" class="league-section">
+        <h2>Leagues</h2>
+        <div class="league-container">
             <!-- Premier League -->
             <div class="league">
-                <h3><a href="kits.html" class="league-link">Premier League</a></h3>
+                <h3><a href="kits.html?league=premier" class="league-link">Premier League</a></h3>
             </div>
         
             <!-- La Liga -->
             <div class="league">
-                <h3><a href="kits.html" class="league-link">La Liga</a></h3>
+                <h3><a href="kits.html?league=laliga" class="league-link">La Liga</a></h3>
             </div>
         
             <!-- Serie A -->
             <div class="league">
-                <h3><a href="kits.html" class="league-link">Serie A</a></h3>
+                <h3><a href="kits.html?league=seriea" class="league-link">Serie A</a></h3>
             </div>
         
             <!-- Bundesliga -->
             <div class="league">
-                <h3><a href="kits.html" class="league-link">Bundesliga</a></h3>
+                <h3><a href="kits.html?league=bundesliga" class="league-link">Bundesliga</a></h3>
             </div>
         </div>
-        
+    </section>
 
     <section id="reviews" class="reviews-section">
         <h2>Customer Reviews</h2>
@@ -138,7 +155,7 @@
                     </div>
                     <p class="review-date">January 15, 2025</p>
                 </div>
-                <p class="review-text"></p>
+                <p class="review-text">Excellent quality kit, arrived quickly and looks amazing. Will definitely be ordering again!</p>
             </div>
             <div class="review-card">
                 <div class="review-header">
@@ -154,7 +171,7 @@
                     </div>
                     <p class="review-date">February 3, 2025</p>
                 </div>
-                <p class="review-text"></p>
+                <p class="review-text">Very happy with my purchase. The sizing guide was accurate and the material feels premium.</p>
             </div>
             <div class="review-card">
                 <div class="review-header">
@@ -170,7 +187,7 @@
                     </div>
                     <p class="review-date">February 28, 2025</p>
                 </div>
-                <p class="review-text"></p>
+                <p class="review-text">Great service and quick delivery. The name and number printing was perfect!</p>
             </div>
         </div>
         <div class="add-review">
@@ -261,7 +278,9 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="kits.html">Kits</a></li>
-                    <li><a href="customer service.html">Customer Service</a></li>
+                    <li><a href="customer-service.html">Customer Service</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
@@ -289,5 +308,6 @@
     </footer>
 
     <script src="Script.js"></script>
+   
 </body>
 </html>

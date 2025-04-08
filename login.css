@@ -1,6 +1,4 @@
-
-        /* Reusing the color palette and base styles from the original CSS */
-        :root {
+:root {
             --black: #121212;
             --dark-blue: #0c4da2;
             --blue: #1a66cc;
